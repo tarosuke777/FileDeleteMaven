@@ -17,7 +17,7 @@ public class FileDelete {
 
       for (Path path : paths) {
         if (Files.getLastModifiedTime(path).toInstant()
-            .isBefore(ZonedDateTime.now().minusDays(7).toInstant())) {
+            .isBefore(ZonedDateTime.now().minusDays(14).toInstant())) {
           Files.deleteIfExists(path);
         }
       }

@@ -35,18 +35,18 @@ public class FileDeleteTest {
       }
 
       Files.createFile(testPath1);
-      Files.setLastModifiedTime(testPath1, FileTime.from(now.minusDays(8).toInstant()));
+      Files.setLastModifiedTime(testPath1, FileTime.from(now.minusDays(15).toInstant()));
 
       Files.createFile(testPath2);
-      Files.setLastModifiedTime(testPath2, FileTime.from(now.minusDays(7).toInstant()));
+      Files.setLastModifiedTime(testPath2, FileTime.from(now.minusDays(14).toInstant()));
 
       Files.createFile(testPath3);
-      Files.setLastModifiedTime(testPath3, FileTime.from(now.minusDays(6).toInstant()));
+      Files.setLastModifiedTime(testPath3, FileTime.from(now.minusDays(13).toInstant()));
 
     }
 
-    ZonedDateTime deleteDate = now.minusDays(7);
-    when(now.minusDays(7)).thenReturn(deleteDate);
+    ZonedDateTime deleteDate = now.minusDays(14);
+    when(now.minusDays(14)).thenReturn(deleteDate);
     try (MockedStatic<ZonedDateTime> mocked = mockStatic(ZonedDateTime.class)) {
       mocked.when(ZonedDateTime::now).thenReturn(now);
       FileDelete.main(null);
