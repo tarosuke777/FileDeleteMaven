@@ -3,6 +3,7 @@ package file;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,7 +13,7 @@ public class FileDelete {
 
   public static void main(String[] args) {
 
-    try (Stream<Path> stream = Files.list(Path.of("src/test/resources/testdata"))) {
+    try (Stream<Path> stream = Files.list(Paths.get("src/test/resources/testdata"))) {
       List<Path> paths = stream.collect(Collectors.toList());
 
       for (Path path : paths) {
