@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 public class FileDeleteTest {
 
   // @Test
-  // void mainTest_ê≥èÌån() throws IOException {
+  // void mainTest_ÔøΩÔøΩÔøΩÔøΩn() throws IOException {
   //
   // Path testDirPath = Paths.get("src/test/resources/testdata");
   // ZonedDateTime now = spy(ZonedDateTime.of(2023, 10, 7, 0, 0, 0, 0, ZoneId.systemDefault()));
@@ -57,7 +57,7 @@ public class FileDeleteTest {
   // }
 
   @Test
-  void mainTest_ê≥èÌån_Java8() throws IOException {
+  void mainTest_Ê≠£Â∏∏Á≥ª_Java8() throws IOException {
 
     Path testDirPath = Paths.get("src/test/resources/testdata");
     ZonedDateTime now = ZonedDateTime.now();
